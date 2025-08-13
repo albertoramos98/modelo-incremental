@@ -155,7 +155,7 @@ function excluirTarefa(index) {
 // Logout
 function logout() {
     localStorage.removeItem("usuarioLogado");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 }
 
 // Setup inicial
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname.split("/").pop(); // Pega apenas o nome do arquivo
 
     // Lógica para as páginas de login e cadastro
-    if (path === "login.html" || path === "cadastro.html") {
+    if (path === "index.html" || path === "cadastro.html") {
         const btnLogin = document.getElementById("btnLogin");
         const btnCadastrar = document.getElementById("btnCadastrar");
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let usuarioLogado = localStorage.getItem("usuarioLogado");
         if (!usuarioLogado) {
             alert("Você precisa estar logado para acessar esta página!");
-            window.location.href = "login.html";
+            window.location.href = "index.html";
             return;
         }
 
