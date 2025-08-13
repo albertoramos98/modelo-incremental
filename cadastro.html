@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Conta</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 7L4 7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18 12L6 12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                <path d="M16 17L8 17" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+
+        <h1>Crie sua Conta</h1>
+
+        <form>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="cadastroUsuario" placeholder="Escolha um nome de usuário" required />
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="cadastroSenha" placeholder="Crie uma senha" required />
+            </div>
+
+            <button type="button" id="btnCadastrar" class="login-btn">Cadastrar</button>
+        </form>
+
+        <div id="mensagem"></div>
+
+        <p class="signup-link">
+            Já tem uma conta? <a href="login.html">Faça Login</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
