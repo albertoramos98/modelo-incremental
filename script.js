@@ -1,7 +1,7 @@
-// Variável global para as tarefas
+// Variável global para as tarefas lembrando que eu odeio javascript
 let tarefas = [];
 
-// Função para mostrar mensagens na página (se existir o elemento #mensagem)
+// Função para mostrar mensagens na página (se existir o elemento #mensagem, porém só se for de ódio)
 function mostrarMensagem(texto, cor) {
     const msg = document.getElementById("mensagem");
     if (!msg) return;
@@ -14,7 +14,7 @@ function mostrarMensagem(texto, cor) {
     }
 }
 
-// Cadastro de usuário
+// Cadastro de usuário (cadastra logo irmão)
 function fazerCadastro() {
     let usuario = document.getElementById("cadastroUsuario").value.trim();
     let senha = document.getElementById("cadastroSenha").value.trim();
@@ -40,7 +40,7 @@ function fazerCadastro() {
     document.getElementById("cadastroSenha").value = "";
 }
 
-// Login do usuário
+// Login do usuário (se não logar a culpa não é minha, odeio js)
 function fazerLogin() {
     let usuario = document.getElementById("loginUsuario").value.trim();
     let senha = document.getElementById("loginSenha").value.trim();
@@ -61,7 +61,7 @@ function fazerLogin() {
     }
 }
 
-// Carrega tarefas do usuário logado
+// Carrega tarefas do usuário logado (pra que lembra de lavar prato, não é mesmo ?)
 function carregarTarefas() {
     let usuarioLogado = localStorage.getItem("usuarioLogado");
     if (!usuarioLogado) return;
@@ -69,7 +69,7 @@ function carregarTarefas() {
     tarefas = JSON.parse(localStorage.getItem(`tarefas_${usuarioLogado}`)) || [];
 }
 
-// Salva as tarefas no localStorage do usuário logado
+// Salva as tarefas no localStorage do usuário logado (se não salvar eu me mato)
 function salvarTarefas() {
     let usuarioLogado = localStorage.getItem("usuarioLogado");
     if (!usuarioLogado) return;
@@ -77,7 +77,7 @@ function salvarTarefas() {
     localStorage.setItem(`tarefas_${usuarioLogado}`, JSON.stringify(tarefas));
 }
 
-// Exibe tarefas na lista
+// Exibe tarefas na lista (RECEBA !!!!!)
 function exibirTarefas() {
     let lista = document.getElementById("listaTarefas");
     if (!lista) return;
@@ -118,7 +118,7 @@ function exibirTarefas() {
 }
 
 
-// Adiciona nova tarefa
+// Adiciona nova tarefa (ESSA É PRA QUEM DIZIA QUE EU NÃO SABIA FAZER UM FOR)
 function adicionarTarefa() {
     let inputTarefa = document.getElementById("novaTarefa");
     if (!inputTarefa) return;
@@ -135,7 +135,7 @@ function adicionarTarefa() {
     exibirTarefas();
 }
 
-// Edita tarefa
+// Edita tarefa (PEGA ESSE CRUD PERFEITO)
 function editarTarefa(index) {
     let novaDescricao = prompt("Edite a tarefa:", tarefas[index]);
     if (novaDescricao !== null && novaDescricao.trim() !== "") {
@@ -145,7 +145,7 @@ function editarTarefa(index) {
     }
 }
 
-// Excluir tarefa
+// Excluir tarefa (SE NÃO FOR EXCLUIDO NO AMOR,VAI NA DOR)
 function excluirTarefa(index) {
     tarefas.splice(index, 1);
     salvarTarefas();
